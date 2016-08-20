@@ -1,5 +1,7 @@
 // Sass Variables
 //
+// Sass variables and their values
+//
 // Markup:
 // <div class="sg-variable-group">
 //   <div class="sg-variable" data-variable-name="font-family--base"></div>
@@ -26,6 +28,8 @@ $sg-variables: (
 );
 
 // Colors
+//
+// All colors should be referenced by variable name.
 //
 // Markup:
 // <div class="sg-swatch-group">
