@@ -1,3 +1,10 @@
+// Default Navigation
+//
+// Styleguide Navigation.Default
+.c-nav .c-nav__group {
+  margin: 0;
+}
+
 // Primary Navigation
 //
 // The top navigation on the site.
@@ -26,6 +33,7 @@
   }
 
   .c-nav__link {
+    display: inline-block;
     padding: 26px 17px;
     transition: box-shadow 500ms ease, color 300ms ease;
     color: $color--nav;

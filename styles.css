@@ -391,6 +391,9 @@ img {
   max-width: 100%;
   height: auto; }
 
+.c-nav .c-nav__group {
+  margin: 0; }
+
 .c-nav--primary::after {
   clear: both;
   content: "";
@@ -403,6 +406,7 @@ img {
   float: left; }
 
 .c-nav--primary .c-nav__link {
+  display: inline-block;
   padding: 26px 17px;
   -webkit-transition: box-shadow 500ms ease, color 300ms ease;
   transition: box-shadow 500ms ease, color 300ms ease;
