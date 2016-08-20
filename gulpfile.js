@@ -26,7 +26,7 @@
   gulp.task('styleguide', ['sass'], function() {
     return kss({
       source: 'sass',
-      destination: 'styleguide',
+      destination: 'generated-styleguide',
       css: '../styles.css'
     });
   });
