@@ -1,0 +1,19 @@
+{
+  "name": "living-style-guide-example",
+  "version": "1.0.0",
+  "description": "A sample living style guide for a talk at CSS Dev Conf 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Vanderpol <matt@vanderpol.net> (http://www.vanderpol.net/)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
+    "kss": "^3.0.0-beta.14"
+  }
+}

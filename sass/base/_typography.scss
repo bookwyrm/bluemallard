@@ -1,0 +1,20 @@
+@mixin font-family--default {
+  font-family: $font-family--base;
+}
+
+@mixin font-family--primary {
+  font-family: $font-family--primary, $font-family--base;
+}
+
+@mixin font-family--accent {
+  font-family: $font-family--accent, sans-serif;
+}
+
+body {
+  color: $color--text;
+  line-height: ($line-height--base / $font-size--base);
+
+  @include primary-font-loaded {
+    @include font-family--primary;
+  }
+}

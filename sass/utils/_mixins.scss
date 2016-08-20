@@ -1,0 +1,33 @@
+// Sass Mixins
+//
+// Styleguide Sass.Mixins
+
+// Font Mixins
+//
+// Styleguide Sass.Mixins.Fonts
+
+// primary-font-loaded
+//
+// Selector wrapper to apply styles only when the primary font is loaded.
+//
+// Compatible in all browsers
+//
+// Styleguide Sass.Mixins.Fonts.Primary Font Loaded
+@mixin primary-font-loaded {
+  @at-root .html__font-loaded--primary #{&} {
+    @content;
+  }
+}
+
+// secondary-font-loaded
+//
+// Selector wrapper to apply styles only when the secondary font is loaded.
+//
+// Compatible in all borwsers.
+//
+// Styleguide Sass.Mixins.Fonts.Secondary Font Loaded
+@mixin secondary-font-loaded {
+  @at-root .html__font-loaded--accent #{&} {
+    @content;
+  }
+}

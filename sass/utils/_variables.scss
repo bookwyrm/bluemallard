@@ -1,0 +1,51 @@
+// Sass Variables
+//
+// Styleguide Sass.Variables
+$font-family--base: Arial, sans-serif;
+$font-family--primary: Roboto;
+$font-family--accent: Oswald;
+$font-size--base: 16px;
+$line-height--base: 22px;
+
+// Colors
+//
+// Styleguide Sass.Colors
+
+// Text Color
+//
+// Markup:
+// <div class="sg-swatch sg-swatch--text"><div class="sg-swatch__color"></div></div>
+//
+// Weight: 1
+//
+// Styleguide Sass.Colors.Text
+$color--text: #666;
+
+// Nav Color
+//
+// Markup:
+// <div class="sg-swatch sg-swatch--nav"><div class="sg-swatch__color"></div></div>
+//
+// Weight: 2
+//
+// Styleguide Sass.Colors.Nav
+$color--nav: #222;
+
+// Active Color
+//
+// Markup:
+// <div class="sg-swatch sg-swatch--active"><div class="sg-swatch__color"></div></div>
+//
+// Weight: 3
+// Styleguide Sass.Colors.Active
+$color--active: #4dbd90;
+
+// Hover Color
+//
+// Weight: 4
+//
+// Markup:
+// <div class="sg-swatch sg-swatch--hover"><div class="sg-swatch__color"></div></div>
+//
+// Styleguide Sass.Colors.Hover
+$color--hover: hsla(0, 0%, 71%, 0.5);
