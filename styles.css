@@ -480,3 +480,41 @@ img {
 
 .sg-swatch--hover .sg-swatch__details::after {
   content: "$color--hover"; }
+
+#kssref-sass-variables .kss-markup {
+  display: none; }
+
+.sg-variable {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4; }
+
+.sg-variable[data-variable-name='font-family--base']::before {
+  content: "$font-family--base"; }
+
+.sg-variable[data-variable-name='font-family--base']::after {
+  content: ": Arial, sans-serif"; }
+
+.sg-variable[data-variable-name='font-family--primary']::before {
+  content: "$font-family--primary"; }
+
+.sg-variable[data-variable-name='font-family--primary']::after {
+  content: ": Roboto"; }
+
+.sg-variable[data-variable-name='font-family--accent']::before {
+  content: "$font-family--accent"; }
+
+.sg-variable[data-variable-name='font-family--accent']::after {
+  content: ": Oswald"; }
+
+.sg-variable[data-variable-name='font-size--base']::before {
+  content: "$font-size--base"; }
+
+.sg-variable[data-variable-name='font-size--base']::after {
+  content: ": 16px"; }
+
+.sg-variable[data-variable-name='line-height--base']::before {
+  content: "$line-height--base"; }
+
+.sg-variable[data-variable-name='line-height--base']::after {
+  content: ": 22px"; }
