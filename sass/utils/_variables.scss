@@ -29,19 +29,19 @@ $sg-variables: (
 //
 // Markup:
 // <div class="sg-swatch-group">
-//   <div class="sg-swatch sg-swatch--text">
+//   <div class="sg-swatch" data-color-name="text">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch sg-swatch--nav">
+//   <div class="sg-swatch" data-color-name="nav">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch sg-swatch--active">
+//   <div class="sg-swatch" data-color-name="active">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch sg-swatch--hover">
+//   <div class="sg-swatch" data-color-name="hover">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
@@ -54,7 +54,7 @@ $color--active: #4dbd90;
 $color--hover: hsla(0, 0%, 71%, 0.5);
 
 // Put colors in a map for ease of output in styleguide
-$colors: (
+$sg-colors: (
  text: $color--text,
  nav: $color--nav,
  active: $color--active,

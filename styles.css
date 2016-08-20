@@ -438,47 +438,47 @@ img {
   margin: 0 auto; }
 
 .sg-swatch__details {
-  padding-top: 10px; }
+  padding-top: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  white-space: nowrap; }
   .sg-swatch__details::before, .sg-swatch__details::after {
-    display: block;
-    font-family: monospace;
-    font-size: 16px;
-    white-space: nowrap; }
+    display: block; }
 
-.sg-swatch--text .sg-swatch__preview {
+.sg-swatch[data-color-name='text'] .sg-swatch__preview {
   background-color: #666; }
 
-.sg-swatch--text .sg-swatch__details::before {
+.sg-swatch[data-color-name='text'] .sg-swatch__details::before {
   content: "#666"; }
 
-.sg-swatch--text .sg-swatch__details::after {
+.sg-swatch[data-color-name='text'] .sg-swatch__details::after {
   content: "$color--text"; }
 
-.sg-swatch--nav .sg-swatch__preview {
+.sg-swatch[data-color-name='nav'] .sg-swatch__preview {
   background-color: #222; }
 
-.sg-swatch--nav .sg-swatch__details::before {
+.sg-swatch[data-color-name='nav'] .sg-swatch__details::before {
   content: "#222"; }
 
-.sg-swatch--nav .sg-swatch__details::after {
+.sg-swatch[data-color-name='nav'] .sg-swatch__details::after {
   content: "$color--nav"; }
 
-.sg-swatch--active .sg-swatch__preview {
+.sg-swatch[data-color-name='active'] .sg-swatch__preview {
   background-color: #4dbd90; }
 
-.sg-swatch--active .sg-swatch__details::before {
+.sg-swatch[data-color-name='active'] .sg-swatch__details::before {
   content: "#4dbd90"; }
 
-.sg-swatch--active .sg-swatch__details::after {
+.sg-swatch[data-color-name='active'] .sg-swatch__details::after {
   content: "$color--active"; }
 
-.sg-swatch--hover .sg-swatch__preview {
+.sg-swatch[data-color-name='hover'] .sg-swatch__preview {
   background-color: rgba(181, 181, 181, 0.5); }
 
-.sg-swatch--hover .sg-swatch__details::before {
+.sg-swatch[data-color-name='hover'] .sg-swatch__details::before {
   content: "rgba(181, 181, 181, 0.5)"; }
 
-.sg-swatch--hover .sg-swatch__details::after {
+.sg-swatch[data-color-name='hover'] .sg-swatch__details::after {
   content: "$color--hover"; }
 
 #kssref-sass-variables .kss-markup {

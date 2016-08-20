@@ -22,25 +22,25 @@
 
   .sg-swatch__details {
     padding-top: 10px;
+    font-family: monospace;
+    font-size: 16px;
+    white-space: nowrap;
 
     &::before,
     &::after {
       display: block;
-      font-family: monospace;
-      font-size: 16px;
-      white-space: nowrap;
     }
   }
 
-@each $color-name in map-keys($colors) {
-  .sg-swatch--#{$color-name} {
+@each $color-name in map-keys($sg-colors) {
+  .sg-swatch[data-color-name='#{$color-name}'] {
     .sg-swatch__preview {
-      background-color: map-get($colors, $color-name);
+      background-color: map-get($sg-colors, $color-name);
     }
 
     .sg-swatch__details {
       &::before {
-        content: '#{map-get($colors, $color-name)}';
+        content: '#{map-get($sg-colors, $color-name)}';
       }
 
       &::after {
