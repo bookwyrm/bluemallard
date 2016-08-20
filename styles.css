@@ -418,36 +418,65 @@ img {
   color: #4dbd90;
   box-shadow: inset 0 3px 0 0 #4dbd90; }
 
-.sg-swatch {
-  text-align: center; }
-  .sg-swatch::after {
-    font-family: monospace;
-    white-space: nowrap; }
-  .sg-swatch .sg-swatch__color {
-    height: 100px;
-    width: 100px;
-    margin: 0 auto; }
+#kssref-colors .kss-markup {
+  display: none; }
 
-.sg-swatch--text .sg-swatch__color {
+.sg-swatch-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.sg-swatch {
+  margin: 0 20px 20px 0;
+  text-align: center; }
+
+.sg-swatch__preview {
+  height: 150px;
+  width: 300px;
+  margin: 0 auto; }
+
+.sg-swatch__details {
+  padding-top: 10px; }
+  .sg-swatch__details::before, .sg-swatch__details::after {
+    display: block;
+    font-family: monospace;
+    font-size: 16px;
+    white-space: nowrap; }
+
+.sg-swatch--text .sg-swatch__preview {
   background-color: #666; }
 
-.sg-swatch--text::after {
-  content: '$color--text'; }
+.sg-swatch--text .sg-swatch__details::before {
+  content: "#666"; }
 
-.sg-swatch--active .sg-swatch__color {
-  background-color: #4dbd90; }
+.sg-swatch--text .sg-swatch__details::after {
+  content: "$color--text"; }
 
-.sg-swatch--active::after {
-  content: '$color--active'; }
-
-.sg-swatch--nav .sg-swatch__color {
+.sg-swatch--nav .sg-swatch__preview {
   background-color: #222; }
 
-.sg-swatch--nav::after {
-  content: '$color--nav'; }
+.sg-swatch--nav .sg-swatch__details::before {
+  content: "#222"; }
 
-.sg-swatch--hover .sg-swatch__color {
+.sg-swatch--nav .sg-swatch__details::after {
+  content: "$color--nav"; }
+
+.sg-swatch--active .sg-swatch__preview {
+  background-color: #4dbd90; }
+
+.sg-swatch--active .sg-swatch__details::before {
+  content: "#4dbd90"; }
+
+.sg-swatch--active .sg-swatch__details::after {
+  content: "$color--active"; }
+
+.sg-swatch--hover .sg-swatch__preview {
   background-color: rgba(181, 181, 181, 0.5); }
 
-.sg-swatch--hover::after {
-  content: '$color--hover'; }
+.sg-swatch--hover .sg-swatch__details::before {
+  content: "rgba(181, 181, 181, 0.5)"; }
+
+.sg-swatch--hover .sg-swatch__details::after {
+  content: "$color--hover"; }

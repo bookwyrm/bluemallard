@@ -1,53 +1,52 @@
+// Don't display markup for colors since we are just showing swatches.
+// scss-lint:disable IdSelector
+#kssref-colors .kss-markup {
+  display: none;
+}
+// scss-lint:enable IdSelector
+
+.sg-swatch-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .sg-swatch {
+  margin: 0 20px 20px 0;
   text-align: center;
+}
 
-  &::after {
-    font-family: monospace;
-    white-space: nowrap;
-  }
-
-  .sg-swatch__color {
-    @include size(100px);
+  .sg-swatch__preview {
+    @include size(300px 150px);
     margin: 0 auto;
   }
-}
 
-.sg-swatch--text {
-  .sg-swatch__color {
-    background-color: $color--text;
+  .sg-swatch__details {
+    padding-top: 10px;
+
+    &::before,
+    &::after {
+      display: block;
+      font-family: monospace;
+      font-size: 16px;
+      white-space: nowrap;
+    }
   }
 
-  &::after {
-    content: '$color--text';
-  }
-}
+@each $color-name in map-keys($colors) {
+  .sg-swatch--#{$color-name} {
+    .sg-swatch__preview {
+      background-color: map-get($colors, $color-name);
+    }
 
-.sg-swatch--active {
-  .sg-swatch__color {
-    background-color: $color--active;
-  }
+    .sg-swatch__details {
+      &::before {
+        content: '#{map-get($colors, $color-name)}';
+      }
 
-  &::after {
-    content: '$color--active';
-  }
-}
-
-.sg-swatch--nav {
-  .sg-swatch__color {
-    background-color: $color--nav;
-  }
-
-  &::after {
-    content: '$color--nav';
-  }
-}
-
-.sg-swatch--hover {
-  .sg-swatch__color {
-    background-color: $color--hover;
-  }
-
-  &::after {
-    content: '$color--hover';
+      &::after {
+        content: '$color--#{$color-name}';
+      }
+    }
   }
 }
+

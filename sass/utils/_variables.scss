@@ -9,43 +9,36 @@ $line-height--base: 22px;
 
 // Colors
 //
-// Styleguide Sass.Colors
-
-// Text Color
-//
 // Markup:
-// <div class="sg-swatch sg-swatch--text"><div class="sg-swatch__color"></div></div>
+// <div class="sg-swatch-group">
+//   <div class="sg-swatch sg-swatch--text">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch sg-swatch--nav">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch sg-swatch--active">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch sg-swatch--hover">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+// </div>
 //
-// Weight: 1
-//
-// Styleguide Sass.Colors.Text
+// Styleguide Colors
 $color--text: #666;
-
-// Nav Color
-//
-// Markup:
-// <div class="sg-swatch sg-swatch--nav"><div class="sg-swatch__color"></div></div>
-//
-// Weight: 2
-//
-// Styleguide Sass.Colors.Nav
 $color--nav: #222;
-
-// Active Color
-//
-// Markup:
-// <div class="sg-swatch sg-swatch--active"><div class="sg-swatch__color"></div></div>
-//
-// Weight: 3
-// Styleguide Sass.Colors.Active
 $color--active: #4dbd90;
-
-// Hover Color
-//
-// Weight: 4
-//
-// Markup:
-// <div class="sg-swatch sg-swatch--hover"><div class="sg-swatch__color"></div></div>
-//
-// Styleguide Sass.Colors.Hover
 $color--hover: hsla(0, 0%, 71%, 0.5);
+
+// Put colors in a map for ease of output in styleguide
+$colors: (
+ text: $color--text,
+ nav: $color--nav,
+ active: $color--active,
+ hover: $color--hover,
+);
