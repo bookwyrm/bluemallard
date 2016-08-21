@@ -1,0 +1,33 @@
+// Speaker
+//
+// A speaker headshot.
+//
+// Markup: speaker.hbs
+//
+// Styleguide: Components.Speaker
+.c-speaker {
+  text-align: center;
+}
+
+.c-speaker__headshot {
+  border: 3px solid $color--text-reverse;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+
+.c-speaker__name {
+  $font-size: 18px;
+  @include margin(10px null);
+  @include font-weight(heavy);
+  font-size: em($font-size);
+  line-height: (24px / $font-size);
+}
+
+.c-speaker__byline {
+  $font-size: 14px;
+  @include margin(10px null);
+  @include font-weight(heavy);
+  color: $color--text-medium;
+  font-size: em($font-size);
+  line-height: (20px / $font-size);
+}

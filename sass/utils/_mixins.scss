@@ -52,6 +52,8 @@
     font-weight: 400;
   } @else if $weight == bold {
     font-weight: 500;
+  } @else if $weight == heavy {
+    font-weight: 700;
   } @else {
     @error "Unknown $weight, was #{$weight}"
   }
