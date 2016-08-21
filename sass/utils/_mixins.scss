@@ -27,6 +27,19 @@
 //
 // Styleguide Sass.Mixins.Fonts.Secondary Font Loaded
 @mixin secondary-font-loaded {
+  @at-root .html__font-loaded--secondary #{&} {
+    @content;
+  }
+}
+
+// accent-font-loaded
+//
+// Selector wrapper to apply styles only when the accent font is loaded.
+//
+// Compatible in all browsers.
+//
+// Styleguide Sass.Mixins.Fonts.Accent Font Loaded
+@mixin accent-font-loaded {
   @at-root .html__font-loaded--accent #{&} {
     @content;
   }
