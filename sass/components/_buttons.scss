@@ -1,0 +1,107 @@
+// Buttons
+//
+// Most buttons are simply sized to fit their content with some level of padding
+//
+// Styleguide Buttons
+
+// Default Button
+//
+// Markup:
+// <a href="#" class="c-button">Click Here</a>
+//
+// Weight: 1
+//
+// Styleguide Buttons.Default
+.c-button {
+  display: inline-block;
+  margin: 0 7px;
+  padding: 13px 23px;
+  transition: background-color 300ms ease, box-shadow 300ms ease, color 300ms ease;
+  border-radius: 3px;
+  background-color: $color--dark;
+  box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12);
+
+  &,
+  &:visited {
+    color: $color--text-reverse;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:active,
+  &:hover {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $color--accent;
+  }
+}
+
+// Ghost Button
+//
+// Let's the background show through
+//
+// Markup:
+// <a href="#" class="c-button c-button--ghost">Click Here</a>
+//
+// Weight: 2
+//
+// Styleguide Buttons.Ghost
+.c-button--ghost {
+  background-color: transparent;
+  color: $color--dark;
+  box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12), inset 0 0 0 2px $color--dark;
+
+  &:hover {
+    color: $color--text-reverse;
+    box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12);
+  }
+}
+
+// Accent Button
+//
+// Uses the accent color
+//
+// Markup:
+// <a href="#" class="c-button c-button--accent">Click Here</a>
+//
+// Weight: 3
+//
+// Styleguide Buttons.Accent
+.c-button--accent {
+  background-color: $color--accent;
+}
+
+// Full Width Button
+//
+// Fills the width of the container
+//
+// Markup:
+// <a href="#" class="c-button c-button--full">Click Here</a>
+//
+// Weight: 4
+//
+// Styleguide Buttons.Full
+.c-button--full {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+// Combining Styles
+//
+// Button styles can be combined to create variations
+//
+// Markup:
+// <a href="#" class="c-button c-button--full c-button--accent">Click Here</a>
+//
+// Weight: 5
+//
+// Styleguide Buttons.Combining

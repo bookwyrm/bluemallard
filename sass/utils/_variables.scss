@@ -32,11 +32,15 @@ $sg-variables: (
 
 // Colors
 //
-// All colors should be referenced by variable name.
+// All colors should be referenced by variable name. Color naming is a complicated topic that needs to be further explored. Should you name by shade or by usage intent? Naming by usage is tough when the same color can be used in multiple places. You can quickly end up with a very complicated swatch setup.
 //
 // Markup:
 // <div class="sg-swatch-group">
 //   <div class="sg-swatch" data-color-name="text">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="text-reverse">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
@@ -48,7 +52,15 @@ $sg-variables: (
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
+//   <div class="sg-swatch" data-color-name="accent">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
 //   <div class="sg-swatch" data-color-name="hover">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="dark">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
@@ -56,14 +68,20 @@ $sg-variables: (
 //
 // Styleguide Colors
 $color--text: #666;
+$color--text-reverse: #fff;
 $color--nav: #222;
 $color--active: #4dbd90;
+$color--accent: #489fd9;
 $color--hover: hsla(0, 0%, 71%, 0.5);
+$color--dark: #000;
 
 // Put colors in a map for ease of output in styleguide
 $sg-colors: (
  text: $color--text,
+ text-reverse: $color--text-reverse,
  nav: $color--nav,
  active: $color--active,
+ accent: $color--accent,
  hover: $color--hover,
+ dark: $color--dark,
 );
