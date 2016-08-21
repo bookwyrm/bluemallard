@@ -46,6 +46,10 @@ $sg-variables: (
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
+//   <div class="sg-swatch" data-color-name="text-medium">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
 //   <div class="sg-swatch" data-color-name="text-reverse">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
@@ -76,6 +80,7 @@ $sg-variables: (
 //
 // Styleguide Colors
 $color--text: #333;
+$color--text-medium: #666;
 $color--text-reverse: #fff;
 $color--nav: #222;
 $color--active: #4dbd90;
@@ -88,6 +93,7 @@ $color--brand-secondary: #581a19;
 // Put colors in a map for ease of output in styleguide
 $sg-colors: (
  text: $color--text,
+ text-medium: $color--text-medium,
  text-reverse: $color--text-reverse,
  nav: $color--nav,
  active: $color--active,
