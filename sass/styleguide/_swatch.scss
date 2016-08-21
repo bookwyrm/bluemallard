@@ -11,13 +11,14 @@
 }
 
 .sg-swatch {
-  margin: 0 20px 20px 0;
+  margin: 0 20px 40px 0;
   text-align: center;
 }
 
   .sg-swatch__preview {
     @include size(300px 150px);
     margin: 0 auto;
+    border: 1px solid $color--dark;
   }
 
   .sg-swatch__details {
