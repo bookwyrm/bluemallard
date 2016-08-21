@@ -469,6 +469,51 @@ img {
   margin: 0;
   text-align: center; }
 
+.c-hero {
+  background-attachment: scroll, scroll, scroll;
+  background-color: #be3229;
+  background-image: url("images/texture.png"), url("images/texas.svg"), -webkit-linear-gradient(0, #be3229, #581a19);
+  background-image: url("images/texture.png"), url("images/texas.svg"), linear-gradient(0, #be3229, #581a19);
+  background-repeat: repeat, no-repeat, repeat;
+  background-position: 0 0, 50% 50%, 0 0;
+  background-size: 200px, cover, auto; }
+
+.c-hero__body,
+.c-hero__media {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .c-hero__body:last-child,
+  .c-hero__media:last-child {
+    margin-right: 0; }
+
+.c-hero__title,
+.c-hero__description {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.23); }
+
+.c-hero__title {
+  margin-top: 0;
+  margin-bottom: 0.52632em;
+  font-weight: 500;
+  font-size: 2.375em;
+  line-height: 1.15789; }
+  .html__font-loaded--accent .c-hero__title {
+    font-family: Oswald, sans-serif; }
+  .c-hero__title time {
+    display: block; }
+
+.c-hero__description {
+  font-weight: 300;
+  margin-bottom: 1.3em;
+  font-size: 1.25em;
+  line-height: 1.3; }
+
+.c-hero__spot {
+  border: 3px solid #fff;
+  border-radius: 3px; }
+
 #kssref-colors .kss-markup {
   display: none; }
 
