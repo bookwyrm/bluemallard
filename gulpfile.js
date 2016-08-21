@@ -27,7 +27,8 @@
     return kss({
       source: 'sass',
       destination: 'generated-styleguide',
-      css: '../styles.css'
+      css: '../styles.css',
+      builder: './custom-builder'
     });
   });
 
