@@ -391,6 +391,15 @@ img {
   max-width: 100%;
   height: auto; }
 
+.o-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto; }
+  .o-container::after {
+    clear: both;
+    content: "";
+    display: block; }
+
 .c-nav .c-nav__group {
   margin: 0; }
 
