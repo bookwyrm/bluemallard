@@ -44,3 +44,15 @@
     @content;
   }
 }
+
+@mixin font-weight($weight: normal) {
+  @if $weight == light {
+    font-weight: 300;
+  } @else if $weight == normal {
+    font-weight: 400;
+  } @else if $weight == bold {
+    font-weight: 500;
+  } @else {
+    @error "Unknown $weight, was #{$weight}"
+  }
+}
