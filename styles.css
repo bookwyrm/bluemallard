@@ -493,19 +493,29 @@ img {
   content: "$font-family--base"; }
 
 .sg-variable[data-variable-name='font-family--base']::after {
-  content: ": Arial, sans-serif"; }
+  content: ": Arial, sans-serif";
+  font-family: Arial, sans-serif; }
 
 .sg-variable[data-variable-name='font-family--primary']::before {
   content: "$font-family--primary"; }
 
 .sg-variable[data-variable-name='font-family--primary']::after {
-  content: ": Roboto"; }
+  content: ": Roboto, Arial, sans-serif";
+  font-family: Roboto, Arial, sans-serif; }
+
+.sg-variable[data-variable-name='font-family--secondary']::before {
+  content: "$font-family--secondary"; }
+
+.sg-variable[data-variable-name='font-family--secondary']::after {
+  content: ": Roboto Slab, Arial, sans-serif";
+  font-family: Roboto Slab, Arial, sans-serif; }
 
 .sg-variable[data-variable-name='font-family--accent']::before {
   content: "$font-family--accent"; }
 
 .sg-variable[data-variable-name='font-family--accent']::after {
-  content: ": Oswald"; }
+  content: ": Oswald, sans-serif";
+  font-family: Oswald, sans-serif; }
 
 .sg-variable[data-variable-name='font-size--base']::before {
   content: "$font-size--base"; }

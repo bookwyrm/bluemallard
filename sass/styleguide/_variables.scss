@@ -20,6 +20,10 @@
 
       &::after {
         content: ': #{map-get($sg-variables, $variable-name)}';
+
+        @if str-slice($variable-name, 0, 13) == 'font-family--' {
+          font-family: #{map-get($sg-variables, $variable-name)};
+        }
       }
     }
   }
