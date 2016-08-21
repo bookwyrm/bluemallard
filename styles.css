@@ -373,6 +373,12 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 html,
 body {
   height: 100%; }
@@ -406,7 +412,7 @@ img {
 .c-nav--primary::after {
   clear: both;
   content: "";
-  display: table; }
+  display: block; }
 
 .c-nav--primary .c-nav__group {
   float: right; }
