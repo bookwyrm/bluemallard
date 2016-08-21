@@ -1,12 +1,6 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-@import 'vendor/normalize';
 @import 'vendor/bourbon';
 @import 'vendor/neat';
+@import 'vendor/normalize';
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'base/base';

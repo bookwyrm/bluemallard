@@ -1,7 +1,8 @@
-*,
-*::before,
-*::after {
+html {
   box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -372,12 +373,6 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
-
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
 
 html,
 body {
