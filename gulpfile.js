@@ -18,7 +18,7 @@
   };
 
   gulp.task('sass', function() {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('./src/sass/**/*.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
     .pipe(autoprefixer())
@@ -27,7 +27,7 @@
 
   gulp.task('styleguide', ['sass'], function() {
     return kss({
-      source: 'sass',
+      source: 'src',
       destination: 'generated-styleguide',
       css: '../dist/styles.css'
     });
@@ -46,7 +46,9 @@
   });
 
   gulp.task('watch', function() {
-    gulp.watch('./sass/**/*.scss', ['styleguide']);
+    gulp.watch('./src/sass/**/*.scss', ['styleguide']);
+    gulp.watch('./src/partials/**/*.hbs', ['html']);
+    gulp.watch('./src/pages/**/*.hbs', ['html']);
   });
 
   gulp.task('default', ['sass', 'styleguide', 'watch']);
