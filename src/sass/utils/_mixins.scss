@@ -51,7 +51,7 @@
   }
 }
 
-@mixin font-weight($weight: normal) {
+@mixin font-weight($weight: normal, $font: primary) {
   @if $weight == light {
     font-weight: 300;
   } @else if $weight == normal {
