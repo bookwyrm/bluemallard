@@ -51,6 +51,15 @@
   }
 }
 
+// font-weight
+//
+// Centralize font weights in one place, in case they need to be tweaked for specific fonts.
+//
+// Compatible in all browsers.
+//
+// Weight: 40
+//
+// Styleguide Sass.Mixins.Fonts.font-weight
 @mixin font-weight($weight: normal, $font: primary) {
   @if $weight == light {
     font-weight: 300;
