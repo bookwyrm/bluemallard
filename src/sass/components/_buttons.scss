@@ -6,8 +6,7 @@
 
 // Default Button
 //
-// Markup:
-// <a href="#" class="c-button">Click Here</a>
+// Markup: button.hbs
 //
 // Weight: 1
 //
@@ -49,7 +48,7 @@
 // Let's the background show through
 //
 // Markup:
-// <a href="#" class="c-button c-button--ghost">Click Here</a>
+// {{> button button-classes="c-button--ghost" button-text="Click Here"}}
 //
 // Weight: 2
 //
