@@ -12,6 +12,8 @@
 //
 // Compatible in all browsers
 //
+// Weight: 10
+//
 // Styleguide Sass.Mixins.Fonts.Primary Font Loaded
 @mixin primary-font-loaded {
   @at-root .html__font-loaded--primary #{&} {
@@ -25,6 +27,8 @@
 //
 // Compatible in all browsers.
 //
+// Weight: 20
+//
 // Styleguide Sass.Mixins.Fonts.Secondary Font Loaded
 @mixin secondary-font-loaded {
   @at-root .html__font-loaded--secondary #{&} {
@@ -37,6 +41,8 @@
 // Selector wrapper to apply styles only when the accent font is loaded.
 //
 // Compatible in all browsers.
+//
+// Weight: 30
 //
 // Styleguide Sass.Mixins.Fonts.Accent Font Loaded
 @mixin accent-font-loaded {
