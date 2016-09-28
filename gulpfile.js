@@ -37,7 +37,7 @@
     return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars({}, {
       ignorePartials: true,
-      batch: ['./src/partials']
+      batch: ['./src/partials', './src/partials/components']
     }))
     .pipe(rename({
       extname: '.html'
