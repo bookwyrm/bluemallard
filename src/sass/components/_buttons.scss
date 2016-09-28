@@ -69,7 +69,7 @@
 // Uses the accent color
 //
 // Markup:
-// <a href="#" class="c-button c-button--accent">Click Here</a>
+// {{> button button-classes="c-button--accent"}}
 //
 // Weight: 3
 //
@@ -83,7 +83,7 @@
 // Fills the width of the container
 //
 // Markup:
-// <a href="#" class="c-button c-button--full">Click Here</a>
+// {{> button button-classes="c-button--full"}}
 //
 // Weight: 4
 //
@@ -99,7 +99,7 @@
 // Button styles can be combined to create variations
 //
 // Markup:
-// <a href="#" class="c-button c-button--full c-button--accent">Click Here</a>
+// {{> button button-classes="c-button--full c-button--accent"}}
 //
 // Weight: 5
 //
