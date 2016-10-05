@@ -7,8 +7,8 @@
 // Styleguide: Components.Hero
 .c-hero {
   background-attachment: scroll, scroll, scroll;
-  background-color: $color--brand-primary;
-  background-image: url('images/texture.png'), url('images/texas.svg'), linear-gradient(0, $color--brand-primary, $color--brand-secondary);
+  background-color: $t-brand-color--primary;
+  background-image: url('images/texture.png'), url('images/texas.svg'), linear-gradient(0, $t-brand-color--primary, $t-brand-color--secondary);
   background-repeat: repeat, no-repeat, repeat;
   background-position: 0 0, 50% 50%, 0 0;
   background-size: 200px, cover, auto;
@@ -21,8 +21,8 @@
 
 .c-hero__title,
 .c-hero__description {
-  color: $color--text-reverse;
-  text-shadow: 0 1px 0 change-color($color--dark, $alpha: 0.23);
+  color: $t-text-color--reverse;
+  text-shadow: 0 1px 0 change-color($t-color--dark, $alpha: 0.23);
 }
 
 .c-hero__title {
@@ -50,6 +50,6 @@
 }
 
 .c-hero__spot {
-  border: 3px solid $color--text-reverse;
+  border: 3px solid $t-text-color--reverse;
   border-radius: 3px;
 }

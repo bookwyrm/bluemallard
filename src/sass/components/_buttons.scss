@@ -19,12 +19,12 @@
   padding: 13px 23px;
   transition: background-color 300ms ease, box-shadow 300ms ease, color 300ms ease;
   border-radius: 3px;
-  background-color: $color--dark;
-  box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12);
+  background-color: $t-color--dark;
+  box-shadow: 0 2px 1px 0 change-color($t-color--dark, $alpha: 0.12);
 
   &,
   &:visited {
-    color: $color--text-reverse;
+    color: $t-text-color--reverse;
   }
 
   &:first-child {
@@ -41,7 +41,7 @@
   }
 
   &:hover {
-    background-color: $color--accent;
+    background-color: $t-color--accent;
   }
 }
 
@@ -57,16 +57,16 @@
 // Styleguide Buttons.Ghost
 .c-button--ghost {
   background-color: transparent;
-  box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12), inset 0 0 0 2px $color--dark;
+  box-shadow: 0 2px 1px 0 change-color($t-color--dark, $alpha: 0.12), inset 0 0 0 2px $t-color--dark;
 
   &,
   &:visited {
-    color: $color--dark;
+    color: $t-color--dark;
   }
 
   &:hover {
-    color: $color--text-reverse;
-    box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12);
+    color: $t-text-color--reverse;
+    box-shadow: 0 2px 1px 0 change-color($t-color--dark, $alpha: 0.12);
   }
 }
 
@@ -81,7 +81,7 @@
 //
 // Styleguide Buttons.Accent
 .c-button--accent {
-  background-color: $color--accent;
+  background-color: $t-color--accent;
 }
 
 // Full Width Button

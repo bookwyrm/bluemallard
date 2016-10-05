@@ -42,35 +42,47 @@ $sg-variables: (
 //
 // Markup:
 // <div class="sg-swatch-group">
-//   <div class="sg-swatch" data-color-name="text">
+//   <div class="sg-swatch" data-color-name="white">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="text-medium">
+//   <div class="sg-swatch" data-color-name="grey-ccc">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="text-reverse">
+//   <div class="sg-swatch" data-color-name="grey-666">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="nav">
+//   <div class="sg-swatch" data-color-name="grey-333">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="active">
+//   <div class="sg-swatch" data-color-name="grey-222">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="accent">
+//   <div class="sg-swatch" data-color-name="grey-soft">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="hover">
+//   <div class="sg-swatch" data-color-name="black">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
-//   <div class="sg-swatch" data-color-name="dark">
+//   <div class="sg-swatch" data-color-name="green">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="blue">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brick">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="maroon">
 //    <div class="sg-swatch__preview"></div>
 //    <div class="sg-swatch__details"></div>
 //   </div>
@@ -79,25 +91,112 @@ $sg-variables: (
 // Weight: -100
 //
 // Styleguide Colors
-$color--text: #333;
-$color--text-medium: #666;
-$color--text-reverse: #fff;
-$color--nav: #222;
-$color--active: #4dbd90;
-$color--accent: #489fd9;
-$color--hover: hsla(0, 0%, 71%, 0.5);
-$color--dark: #000;
-$color--brand-primary: #be3229;
-$color--brand-secondary: #581a19;
+$color--white: #fff;
+$color--grey-ccc: #ccc;
+$color--grey-666: #666;
+$color--grey-333: #333;
+$color--grey-222: #222;
+$color--grey-soft: hsla(0, 0%, 71%, 0.5);
+$color--black: #000;
+$color--green: #4dbd90;
+$color--blue: #489fd9;
+$color--brick: #be3229;
+$color--maroon: #581a19;
+
+$sg-colors: (
+  white: $color--white,
+  grey-ccc: $color--grey-ccc,
+  grey-666: $color--grey-666,
+  grey-333: $color--grey-333,
+  grey-222: $color--grey-222,
+  grey-soft: $color--grey-soft,
+  black: $color--black,
+  green: $color--green,
+  blue: $color--blue,
+  brick: $color--brick,
+  maroon: $color--maroon,
+);
+
+// Tokens
+//
+// Write a bit about tokens...
+//
+// Weight: -90
+//
+// Styleguide Tokens
+
+// Color Tokens
+//
+// Write a bit about color tokens
+//
+// Markup:
+// <div class="sg-swatch-group">
+//   <div class="sg-swatch" data-color-name="text-color">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="text-color--medium">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="text-color--reverse">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--active">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--accent">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--hover">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--dark">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brand-color--dark">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brand-color--primary">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brand-color--secondary">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+/// </div>
+//
+// Weight: 0
+//
+// Styleguide Tokens.Colors
+$t-color--active: $color--green;
+$t-color--accent: $color--blue;
+$t-color--hover: $color--grey-soft;
+$t-color--dark: $color--black;
+$t-brand-color--dark: $color--black;
+$t-brand-color--primary: $color--brick;
+$t-brand-color--secondary: $color--maroon;
+$t-text-color: $color--grey-333;
+$t-text-color--medium: $color--grey-666;
+$t-text-color--reverse: $color--white;
 
 // Put colors in a map for ease of output in styleguide
-$sg-colors: (
- text: $color--text,
- text-medium: $color--text-medium,
- text-reverse: $color--text-reverse,
- nav: $color--nav,
- active: $color--active,
- accent: $color--accent,
- hover: $color--hover,
- dark: $color--dark,
+$sg-tokens--color: (
+ text-color: $t-text-color,
+ text-color--medium: $t-text-color--medium,
+ text-color--reverse: $t-text-color--reverse,
+ color--active: $t-color--active,
+ color--accent: $t-color--accent,
+ color--hover: $t-color--hover,
+ color--dark: $t-color--dark,
+ brand-color--dark: $t-brand-color--dark,
+ brand-color--primary: $t-brand-color--primary,
+ brand-color--secondary: $t-brand-color--secondary,
 );

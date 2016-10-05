@@ -1,3 +1,6 @@
+$lt-bg-color: $color--grey-222;
+$lt-color: $color--white;
+
 .c-nav .c-nav__group {
   margin: 0;
 }
@@ -11,6 +14,8 @@
 // Styleguide Navigation.Primary
 .c-nav--primary {
   @include clearfix;
+  @include position(fixed, 0 0 null 0);
+  background: $lt-bg-color;
 
   .c-nav__group {
     float: right;
@@ -24,15 +29,15 @@
     display: inline-block;
     padding: 26px 17px;
     transition: box-shadow 500ms ease, color 300ms ease;
-    color: $color--nav;
+    color: $lt-color;
 
     &:hover {
-      box-shadow: inset 0 3px 0 0 $color--hover;
+      box-shadow: inset 0 3px 0 0 $t-color--hover;
     }
   }
 
   .c-nav__item.is-active .c-nav__link {
-    color: $color--active;
-    box-shadow: inset 0 3px 0 0 $color--active;
+    color: $t-color--active;
+    box-shadow: inset 0 3px 0 0 $t-color--active;
   }
 }

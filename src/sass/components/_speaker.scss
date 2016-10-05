@@ -10,7 +10,7 @@
 }
 
 .c-speaker__headshot {
-  border: 3px solid $color--text-reverse;
+  border: 3px solid $t-text-color--reverse;
   border-radius: 3px;
   opacity: 0.9;
 }
@@ -27,7 +27,7 @@
   $font-size: 14px;
   @include margin(10px null);
   @include font-weight(heavy);
-  color: $color--text-medium;
+  color: $t-text-color--medium;
   font-size: em($font-size);
   line-height: (20px / $font-size);
 }
