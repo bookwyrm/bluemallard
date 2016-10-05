@@ -12,6 +12,7 @@
   var rename = require('gulp-rename');
   var vfs = require('vinyl-fs');
   var webserver = require('gulp-webserver');
+  var livereload = require('gulp-livereload');
 
   var onError = function(err) {
     console.log('An error ocurred: ', gutil.colors.magenta(err.message));
@@ -25,6 +26,7 @@
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(gulp.dest('./site'))
+    .pipe(livereload())
   });
 
   gulp.task('styleguide', ['sass'], function() {
@@ -45,9 +47,11 @@
       extname: '.html'
     }))
     .pipe(gulp.dest('./site'));
+    .pipe(livereload())
   });
 
   gulp.task('watch', function() {
+    livereload.listen();
     gulp.watch('./src/sass/**/*.scss', ['styleguide']);
     gulp.watch('./src/partials/**/*.hbs', ['html', 'styleguide']);
     gulp.watch('./src/pages/**/*.hbs', ['html']);
