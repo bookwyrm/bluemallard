@@ -57,5 +57,7 @@
     .pipe(vfs.symlink('site'))
     .pipe(vfs.symlink('styleguide'));
   });
+
+  gulp.task('setup', ['sass', 'html', 'styleguide', 'symlink-images']);
   gulp.task('default', ['sass', 'html', 'styleguide', 'watch']);
 }());
