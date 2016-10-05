@@ -52,10 +52,10 @@
     gulp.watch('./src/pages/**/*.hbs', ['html']);
   });
 
-  gulp.task('default', ['sass', 'styleguide', 'watch']);
   gulp.task('symlink-images', function() {
     return vfs.src('images', { followSymlinks: false })
     .pipe(vfs.symlink('site'))
     .pipe(vfs.symlink('generated-styleguide'));
   });
+  gulp.task('default', ['sass', 'html', 'styleguide', 'watch']);
 }());
