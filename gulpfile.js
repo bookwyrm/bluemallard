@@ -20,8 +20,8 @@
     this.emit('end');
   };
 
-  gulp.task('sass', function() {
-    return gulp.src('./src/sass/**/*.scss')
+  gulp.task('sass-site', function() {
+    return gulp.src('./src/sass/styles.scss')
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
     .pipe(autoprefixer())
@@ -29,11 +29,20 @@
     .pipe(livereload())
   });
 
-  gulp.task('styleguide', ['sass'], function() {
+  gulp.task('sass-styleguide', function() {
+    return gulp.src('./src/sass/styleguide.scss')
+    .pipe(plumber({errorHandler: onError}))
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('./styleguide'))
+    .pipe(livereload())
+  });
+
+  gulp.task('styleguide', ['sass-styleguide'], function() {
     return kss({
       source: 'src',
       destination: 'styleguide',
-      css: '../site/styles.css'
+      css: 'styleguide.css'
     });
   });
 
@@ -46,8 +55,9 @@
     .pipe(rename({
       extname: '.html'
     }))
-    .pipe(gulp.dest('./site'));
+    .pipe(gulp.dest('./site'))
     .pipe(livereload())
+    ;
   });
 
   gulp.task('watch', function() {
@@ -81,7 +91,6 @@
       }));
   });
 
-
-  gulp.task('setup', ['sass', 'html', 'styleguide', 'symlink-images', 'webserver-site', 'webserver-styleguide']);
-  gulp.task('default', ['sass', 'html', 'styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
+  gulp.task('setup', ['sass-site', 'sass-styleguide', 'html', 'styleguide', 'symlink-images', 'webserver-site', 'webserver-styleguide']);
+  gulp.task('default', ['sass-site', 'sass-styleguide', 'html', 'styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
 }());
