@@ -10,6 +10,7 @@
   var kss = require('kss');
   var handlebars = require('gulp-compile-handlebars');
   var rename = require('gulp-rename');
+  var vfs = require('vinyl-fs');
 
   var onError = function(err) {
     console.log('An error ocurred: ', gutil.colors.magenta(err.message));
@@ -52,4 +53,9 @@
   });
 
   gulp.task('default', ['sass', 'styleguide', 'watch']);
+  gulp.task('symlink-images', function() {
+    return vfs.src('images', { followSymlinks: false })
+    .pipe(vfs.symlink('site'))
+    .pipe(vfs.symlink('generated-styleguide'));
+  });
 }());
