@@ -22,14 +22,14 @@
     .pipe(plumber({errorHandler: onError}))
     .pipe(sass())
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./site'))
   });
 
   gulp.task('styleguide', ['sass'], function() {
     return kss({
       source: 'src',
       destination: 'generated-styleguide',
-      css: '../dist/styles.css'
+      css: '../site/styles.css'
     });
   });
 
@@ -42,7 +42,7 @@
     .pipe(rename({
       extname: '.html'
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./site'));
   });
 
   gulp.task('watch', function() {
