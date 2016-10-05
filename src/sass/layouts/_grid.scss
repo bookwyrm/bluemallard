@@ -1,0 +1,18 @@
+$lt-grid-padding: 10px;
+$lt-grid-padding--inverse: 0 - $lt-grid-padding;
+
+.l-grid {
+  @include margin(null $lt-grid-padding--inverse);
+  @include clearfix;
+}
+
+  .l-grid__item {
+    @include padding(null $lt-grid-padding);
+    float: left;
+
+    @for $i from 2 through 4 {
+      .l-grid--#{$i}-up & {
+        width: (1 / $i) * 100%;
+      }
+    }
+  }
