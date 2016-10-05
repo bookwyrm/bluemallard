@@ -6,6 +6,7 @@
 //
 // Styleguide: Components.Hero
 .c-hero {
+  @include padding($t-section-padding null);
   background-attachment: scroll, scroll, scroll;
   background-color: $t-brand-color--primary;
   background-image: url('images/texture.png'), url('images/texas.svg'), linear-gradient(0, $t-brand-color--primary, $t-brand-color--secondary);

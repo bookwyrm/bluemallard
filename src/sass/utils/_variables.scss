@@ -200,3 +200,11 @@ $sg-tokens--color: (
  brand-color--primary: $t-brand-color--primary,
  brand-color--secondary: $t-brand-color--secondary,
 );
+
+$t-nav-height: 70px;
+$t-section-padding: 70px;
+
+$sg-tokens: (
+  nav-height: $t-nav-height,
+  section-padding: $t-section-padding,
+);
