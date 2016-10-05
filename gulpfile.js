@@ -47,7 +47,7 @@
 
   gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['styleguide']);
-    gulp.watch('./src/partials/**/*.hbs', ['html']);
+    gulp.watch('./src/partials/**/*.hbs', ['html', 'styleguide']);
     gulp.watch('./src/pages/**/*.hbs', ['html']);
   });
 
