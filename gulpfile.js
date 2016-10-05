@@ -29,7 +29,7 @@
   gulp.task('styleguide', ['sass'], function() {
     return kss({
       source: 'src',
-      destination: 'generated-styleguide',
+      destination: 'styleguide',
       css: '../site/styles.css'
     });
   });
@@ -55,7 +55,7 @@
   gulp.task('symlink-images', function() {
     return vfs.src('images', { followSymlinks: false })
     .pipe(vfs.symlink('site'))
-    .pipe(vfs.symlink('generated-styleguide'));
+    .pipe(vfs.symlink('styleguide'));
   });
   gulp.task('default', ['sass', 'html', 'styleguide', 'watch']);
 }());
