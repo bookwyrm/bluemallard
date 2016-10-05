@@ -11,6 +11,7 @@
   var handlebars = require('gulp-compile-handlebars');
   var rename = require('gulp-rename');
   var vfs = require('vinyl-fs');
+  var webserver = require('gulp-webserver');
 
   var onError = function(err) {
     console.log('An error ocurred: ', gutil.colors.magenta(err.message));
@@ -58,6 +59,25 @@
     .pipe(vfs.symlink('styleguide'));
   });
 
-  gulp.task('setup', ['sass', 'html', 'styleguide', 'symlink-images']);
-  gulp.task('default', ['sass', 'html', 'styleguide', 'watch']);
+  gulp.task('webserver-site', function() {
+    gulp.src('site')
+      .pipe(webserver({
+        host: 'localhost',
+        port: '8080',
+        open: true,
+      }));
+  });
+
+  gulp.task('webserver-styleguide', function() {
+    gulp.src('styleguide')
+      .pipe(webserver({
+        host: 'localhost',
+        port: '7070',
+        open: true,
+      }));
+  });
+
+
+  gulp.task('setup', ['sass', 'html', 'styleguide', 'symlink-images', 'webserver-site', 'webserver-styleguide']);
+  gulp.task('default', ['sass', 'html', 'styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
 }());
