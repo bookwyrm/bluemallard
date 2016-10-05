@@ -57,8 +57,12 @@
 // Styleguide Buttons.Ghost
 .c-button--ghost {
   background-color: transparent;
-  color: $color--dark;
   box-shadow: 0 2px 1px 0 change-color($color--dark, $alpha: 0.12), inset 0 0 0 2px $color--dark;
+
+  &,
+  &:visited {
+    color: $color--dark;
+  }
 
   &:hover {
     color: $color--text-reverse;
