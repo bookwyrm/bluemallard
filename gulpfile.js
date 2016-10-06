@@ -63,7 +63,7 @@
 
   gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('./src/sass/**/*.scss', ['sass-styleguide', 'sass-site', 'styleguide']);
+    gulp.watch('./src/sass/**/*.scss', ['sass-styleguide', 'sass-site', 'generate-styleguide']);
     gulp.watch('./src/partials/**/*.hbs', ['generate-site', 'generate-styleguide']);
     gulp.watch('./src/pages/**/*.hbs', ['generate-site']);
   });
