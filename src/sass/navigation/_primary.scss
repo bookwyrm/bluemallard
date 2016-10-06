@@ -14,8 +14,6 @@ $lt-color: $color--grey-222;
 // Styleguide Navigation.Primary
 .c-nav--primary {
   @include clearfix;
-  @include position(fixed, 0 0 null 0);
-  background: $lt-bg-color;
 
   .c-nav__group {
     float: right;

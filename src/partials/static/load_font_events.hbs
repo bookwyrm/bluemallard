@@ -36,4 +36,14 @@
     fontLoadFailed('Accent');
     });
   }
+
+  if ( !!sessionStorage.fontLoadedCondensed ) {
+    window.document.documentElement.className += ' html__font-loaded--condensed';
+  } else {
+    new FontFaceObserver('Roboto Condensed').load(null, 5000).then(function() {
+      fontLoaded('condensed', 'Condensed');
+    }).catch(function() {
+    fontLoadFailed('Condensed');
+    });
+  }
 }())

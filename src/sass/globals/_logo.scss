@@ -1,0 +1,20 @@
+$lt-color: #1c1c1c;
+$lt-logo-color: #e6eaed;
+
+.g-logo {
+  width: 200px;
+  margin-top: 22px;
+  float: left;
+  clear: none;
+  color: $lt-color;
+  font-size: 27px;
+
+  @include accent-font-loaded {
+    font-family: $t-font-family--accent;
+  }
+}
+
+  .g-logo--footer {
+    margin-top: 0;
+    color: $lt-logo-color;
+  }

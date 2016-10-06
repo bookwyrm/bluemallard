@@ -1,0 +1,7 @@
+$lt-bg-color: $color--white;
+
+.g-header {
+  @include position(fixed, 0 0 null 0);
+  background: $lt-bg-color;
+  z-index: 10;
+}

@@ -77,6 +77,21 @@ h3,
   }
 }
 
+// h4
+//
+// Block heading
+//
+// Markup:
+// <h4 class="b-block-heading">A Block Heading</h4>
+//
+// Styleguide Base.Headings.h4
+h4,
+.b-block-heading {
+  margin: 10px 0;
+  font-size: em(18px);
+  line-height: (24 / 18);
+}
+
 
 
 

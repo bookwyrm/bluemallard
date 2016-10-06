@@ -51,6 +51,21 @@
   }
 }
 
+// condensed-font-loaded
+//
+// Selector wrapper to apply styles only when the condensed font is loaded.
+//
+// Compatible in all browsers.
+//
+// Weight: 40
+//
+// Styleguide Sass.Mixins.Fonts.CondensedFontLoaded
+@mixin condensed-font-loaded {
+  @at-root .html__font-loaded--condensed #{&} {
+    @content;
+  }
+}
+
 // font-weight
 //
 // Centralize font weights in one place, in case they need to be tweaked for specific fonts.
@@ -60,7 +75,7 @@
 // $weight - The named weight (light, normal, bold, heavy)
 // $font   - The name of the font (Roboto, Roboto Slab, Oswald)
 //
-// Weight: 40
+// Weight: 50
 //
 // Styleguide Sass.Mixins.Fonts.font-weight
 @mixin font-weight($weight: normal, $font: primary) {

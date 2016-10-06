@@ -92,17 +92,23 @@ $sg-tokens--color: (
 //   <div class="sg-variable" data-variable-name="font-family--primary"></div>
 //   <div class="sg-variable" data-variable-name="font-family--secondary"></div>
 //   <div class="sg-variable" data-variable-name="font-family--accent"></div>
-//   <div class="sg-variable" data-variable-name="font-size--base"></div>
-//   <div class="sg-variable" data-variable-name="line-height--base"></div>
+//   <div class="sg-variable" data-variable-name="font-family--condensed"></div>
+//   <div class="sg-variable" data-variable-name="font-size"></div>
+//   <div class="sg-variable" data-variable-name="line-height"></div>
 // </div>
 //
 // Weight: 20
 //
 // Styleguide Tokens.Fonts
 $t-font-family: Arial, sans-serif;
-$t-font-family--primary: Roboto, $t-font-family;
-$t-font-family--secondary: 'Roboto Slab', $t-font-family;
-$t-font-family--accent: Oswald, sans-serif;
+$t-font--primary: 'Roboto';
+$t-font-family--primary: $t-font--primary, $t-font-family;
+$t-font--secondary: 'Roboto Slab';
+$t-font-family--secondary: $t-font--secondary, $t-font-family;
+$t-font--accent: Oswald;
+$t-font-family--accent: $t-font--accent, sans-serif;
+$t-font--condensed: 'Roboto Condensed';
+$t-font-family--condensed: $t-font--condensed, $t-font-family;
 $t-font-size: 16px;
 $t-line-height: 22px;
 
@@ -112,6 +118,7 @@ $sg-tokens--font: (
   font-family--primary: $t-font-family--primary,
   font-family--secondary: $t-font-family--secondary,
   font-family--accent: $t-font-family--accent,
+  font-family--condensed: $t-font-family--condensed,
   font-size: $t-font-size,
   line-height: $t-line-height,
 );
