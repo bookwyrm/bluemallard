@@ -101,4 +101,5 @@
   gulp.task('setup', ['sass-site', 'sass-styleguide', 'generate-site', 'generate-styleguide', 'symlink-images']);
   gulp.task('default', ['sass-site', 'sass-styleguide', 'generate-site', 'generate-styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
   gulp.task('styleguide', ['sass-styleguide', 'generate-styleguide', 'webserver-styleguide']);
+  gulp.task('site', ['sass-site', 'generate-site', 'webserver-site']);
 }());
