@@ -83,7 +83,12 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
     // First call the prepare() of the parent KssBuilderBaseHandlebars class.
     // Since it returns a Promise, we do our prep work in a then().
     return super.prepare(styleGuide).then(styleGuide => {
+      var fs = require('fs');
+
       // Load this builder's extra Handlebars helpers.
+      this.Handlebars.registerHelper('include-static', function(static_file) {
+        return fs.readFileSync(__dirname + '/../src/partials/static/' + static_file + '.hbs');
+      });
 
       // Allow a builder user to override the {{section [reference]}} helper
       // with the --extend setting. Since a user's handlebars helpers are
