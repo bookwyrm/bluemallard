@@ -38,7 +38,7 @@
     .pipe(livereload())
   });
 
-  gulp.task('styleguide', ['sass-styleguide'], function() {
+  gulp.task('generate-styleguide', ['sass-styleguide'], function() {
     return kss({
       source: 'src',
       destination: 'styleguide',
@@ -47,7 +47,7 @@
     });
   });
 
-  gulp.task('html', function() {
+  gulp.task('generate-site', function() {
     return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars({}, {
       ignorePartials: true,
@@ -64,8 +64,8 @@
   gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('./src/sass/**/*.scss', ['sass-styleguide', 'sass-site', 'styleguide']);
-    gulp.watch('./src/partials/**/*.hbs', ['html', 'styleguide']);
-    gulp.watch('./src/pages/**/*.hbs', ['html']);
+    gulp.watch('./src/partials/**/*.hbs', ['generate-site', 'generate-styleguide']);
+    gulp.watch('./src/pages/**/*.hbs', ['generate-site']);
   });
 
   gulp.task('symlink-images', function() {
@@ -98,6 +98,7 @@
     .pipe(gulp.dest('src/partials/static'))
   });
 
-  gulp.task('setup', ['sass-site', 'sass-styleguide', 'html', 'styleguide', 'symlink-images', 'webserver-site', 'webserver-styleguide']);
-  gulp.task('default', ['sass-site', 'sass-styleguide', 'html', 'styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
+  gulp.task('setup', ['sass-site', 'sass-styleguide', 'generate-site', 'generate-styleguide', 'symlink-images']);
+  gulp.task('default', ['sass-site', 'sass-styleguide', 'generate-site', 'generate-styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
+  gulp.task('styleguide', ['sass-styleguide', 'generate-styleguide', 'webserver-styleguide']);
 }());
