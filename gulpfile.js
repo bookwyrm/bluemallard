@@ -42,7 +42,8 @@
     return kss({
       source: 'src',
       destination: 'styleguide',
-      css: 'styleguide.css'
+      css: 'styleguide.css',
+      builder: 'styleguide-builder'
     });
   });
 
