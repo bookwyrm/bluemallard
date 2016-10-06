@@ -1,7 +1,8 @@
 // Don't display markup for colors since we are just showing swatches.
 // scss-lint:disable IdSelector
 #kssref-colors,
-#kssref-tokens-colors {
+#kssref-tokens-colors,
+#kssref-tokens-dimensions {
   .kss-markup {
     display: none;
   }

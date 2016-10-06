@@ -201,6 +201,17 @@ $sg-tokens--color: (
  brand-color--secondary: $t-brand-color--secondary,
 );
 
+// Dimensional Tokens
+//
+// Tokens with dimensional values
+//
+// Markup:
+// <div class="sg-variable-group">
+//   <div class="sg-variable" data-variable-name="nav-height"></div>
+//   <div class="sg-variable" data-variable-name="section-padding"></div>
+// </div>
+//
+// Styleguide Tokens.Dimensions
 $t-nav-height: 70px;
 $t-section-padding: 70px;
 

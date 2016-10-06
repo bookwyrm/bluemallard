@@ -11,20 +11,28 @@
   line-height: 1.4;
 }
 
-@each $variable-name in map-keys($sg-variables) {
+@mixin variable($name, $map, $prefix: '$') {
   .sg-variable {
-    &[data-variable-name='#{$variable-name}'] {
+    &[data-variable-name='#{$name}'] {
       &::before {
-        content: '$#{$variable-name}';
+        content: '#{$prefix}#{$name}';
       }
 
       &::after {
-        content: ': #{map-get($sg-variables, $variable-name)}';
+        content: ': #{map-get($map, $name)}';
 
-        @if str-slice($variable-name, 0, 13) == 'font-family--' {
-          font-family: #{map-get($sg-variables, $variable-name)};
+        @if str-slice($name, 0, 13) == 'font-family--' {
+          font-family: #{map-get($map, $name)};
         }
       }
     }
   }
+}
+
+@each $variable-name in map-keys($sg-variables) {
+  @include variable($variable-name, $sg-variables);
+}
+
+@each $variable-name in map-keys($sg-tokens) {
+  @include variable($variable-name, $sg-tokens, '$t-');
 }
