@@ -3,6 +3,15 @@ $lt-color: #e4e8eb;
 $lt-link-color: #939596;
 $lt-link-color--hover: #d2d7d9;
 
+// Site Footer
+//
+// The footer for the site.
+//
+// Markup: site-footer.hbs
+//
+// Weight: 100
+//
+// Styleguide Globals.SiteFooter
 .g-footer {
   @include padding(42px null);
   background: url('images/texture.png')  0 0 / 306px $lt-bg-color;
