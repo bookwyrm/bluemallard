@@ -1,0 +1,30 @@
+// scss-lint:disable IdSelector
+
+// Don't display markup for infrastructure code.
+#kssref-colors,
+#kssref-tokens-colors,
+#kssref-tokens-fonts,
+#kssref-tokens-dimensions {
+  .kss-markup {
+    display: none;
+  }
+}
+
+#kssref-layouts-sections,
+#kssref-layouts-sections-fullbleed {
+  .kss-modifier__example .l-section:first-of-type {
+    margin-top: 0;
+  }
+}
+
+#kssref-navigation-primary {
+  // Don't make it fixed in styleguide
+  .c-nav--primary {
+    position: static;
+  }
+}
+
+.kss-style h2,
+.kss-style h3 {
+  text-align: left;
+}
