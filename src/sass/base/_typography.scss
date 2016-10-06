@@ -1,9 +1,3 @@
-// Typography
-//
-// Weight: -20
-//
-// Styleguide Typography
-
 body {
   color: $t-text-color;
   font-family: $t-font-family;
@@ -16,7 +10,11 @@ body {
 
 // Headings
 //
-// Styleguide Typography.Headings
+// Standard headings. The styles can be applied either via the heading tag or its associated base class.
+//
+// Weight: 40
+//
+// Styleguide Base.Headings
 
 // heading resets
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 // Markup:
 // <h1 class="b-main-heading">A Main Heading</h1>
 //
-// Styleguide Typography.Headings.h1
+// Styleguide Base.Headings.h1
 h1,
 .b-main-heading {
 }
@@ -43,7 +41,7 @@ h1,
 // Markup:
 // <h2 class="b-sub-heading">A Sub Heading</h1>
 //
-// Styleguide Typography.Headings.h2
+// Styleguide Base.Headings.h2
 h2,
 .b-sub-heading {
   @include font-weight(normal);
@@ -65,7 +63,7 @@ h2,
 // Markup:
 // <h3 class="b-section-heading">A Section Heading</h1>
 //
-// Styleguide Typography.Headings.h3
+// Styleguide Base.Headings.h3
 h3,
 .b-section-heading {
   @include font-weight(bold);
