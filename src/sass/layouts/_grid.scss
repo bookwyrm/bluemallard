@@ -1,13 +1,81 @@
 $lt-grid-padding: 10px;
 $lt-grid-padding--inverse: 0 - $lt-grid-padding;
 
+// Grid
+//
+// To layout items in a grid
+//
+// Markup:
+// <div class="l-grid l-grid--3-up">
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+// </div>
+//
+// Styleguide Layouts.Grid
+
+
+// 2-up Grid
+//
+// For a 2-up grid
+//
+// Markup:
+// <div class="l-grid l-grid--2-up">
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+// </div>
+//
+// Weight: 20
+//
+// Styleguide Layouts.Grid.TwoUp
+
+// 3-up Grid
+//
+// For a 3-up grid
+//
+// Markup:
+// <div class="l-grid l-grid--3-up">
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+// </div>
+//
+// Weight: 30
+//
+// Styleguide Layouts.Grid.ThreeUp
+
+// 4-up Grid
+//
+// For a 4-up grid
+//
+// Markup:
+// <div class="l-grid l-grid--4-up">
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+//   <div class="l-grid__item"><div class="sg-helper__cell"></div></div>
+// </div>
+//
+// Weight: 40
+//
+// Styleguide Layouts.Grid.FourUp
+
 .l-grid {
-  @include margin(null $lt-grid-padding--inverse);
   @include clearfix;
+  margin: $lt-grid-padding--inverse;
 }
 
   .l-grid__item {
-    @include padding(null $lt-grid-padding);
+    padding: $lt-grid-padding;
     float: left;
 
     @for $i from 2 through 4 {

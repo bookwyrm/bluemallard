@@ -1,11 +1,45 @@
+// Sections
+//
+// For sections (or rows or layers or bands) of a page. The default section provides vertical padding but no horizontal padding or margin.
+//
+// Markup:
+// <div class="l-section sg-helper__background">
+//   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+// </div>
+//
+// Styleguide Layouts.Sections
 .l-section {
   @include padding($t-section-padding null);
+
+  &:first-of-type {
+    margin-top: $t-nav-height;
+  }
 }
 
-.l-section--first {
-  margin-top: $t-nav-height;
-}
+// First Section
+//
+// The first section on a page will have spacing above the section to prevent it from underlapping the navigation.
+//
+// Markup:
+// <div class="l-section sg-helper__cell">
+// </div>
+//
+// Weight: 10
+//
+// Styleguide Layouts.Sections.FirstSection
 
+// Full Bleed Section
+//
+// Sometimes you want the section to let its contents have full bleed to the edge. The full-bleed variant removes padding and you must specify any padding as part of the content inside the section.
+//
+// Markup:
+// <div class="l-section l-section--full-bleed">
+//   <p class="sg-helper__background">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+// </div>
+//
+// Weight: 20
+//
+// Styleguide Layouts.Sections.FullBleed
 .l-section--full-bleed {
   padding: 0;
 }
