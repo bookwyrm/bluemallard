@@ -1,0 +1,139 @@
+// Tokens
+//
+// Write a bit about tokens...
+//
+// Weight: -90
+//
+// Styleguide Tokens
+
+// Color Tokens
+//
+// Write a bit about color tokens
+//
+// Markup:
+// <div class="sg-swatch-group">
+//   <div class="sg-swatch" data-color-name="text-color">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="text-color--medium">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="text-color--reverse">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--active">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--accent">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--hover">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="color--dark">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brand-color--dark">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brand-color--primary">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brand-color--secondary">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+/// </div>
+//
+// Weight: 0
+//
+// Styleguide Tokens.Colors
+$t-color--active: $color--green;
+$t-color--accent: $color--blue;
+$t-color--hover: $color--grey-soft;
+$t-color--dark: $color--black;
+$t-brand-color--dark: $color--black;
+$t-brand-color--primary: $color--brick;
+$t-brand-color--secondary: $color--maroon;
+$t-text-color: $color--grey-333;
+$t-text-color--medium: $color--grey-666;
+$t-text-color--reverse: $color--white;
+
+// Put colors in a map for ease of output in styleguide
+$sg-tokens--color: (
+ text-color: $t-text-color,
+ text-color--medium: $t-text-color--medium,
+ text-color--reverse: $t-text-color--reverse,
+ color--active: $t-color--active,
+ color--accent: $t-color--accent,
+ color--hover: $t-color--hover,
+ color--dark: $t-color--dark,
+ brand-color--dark: $t-brand-color--dark,
+ brand-color--primary: $t-brand-color--primary,
+ brand-color--secondary: $t-brand-color--secondary,
+);
+
+// Font/Text Tokens
+//
+// Tokens related to fonts or text styling
+//
+// Markup:
+// <div class="sg-variable-group">
+//   <div class="sg-variable" data-variable-name="font-family"></div>
+//   <div class="sg-variable" data-variable-name="font-family--primary"></div>
+//   <div class="sg-variable" data-variable-name="font-family--secondary"></div>
+//   <div class="sg-variable" data-variable-name="font-family--accent"></div>
+//   <div class="sg-variable" data-variable-name="font-size--base"></div>
+//   <div class="sg-variable" data-variable-name="line-height--base"></div>
+// </div>
+//
+// Weight: 20
+//
+// Styleguide Tokens.Fonts
+$t-font-family: Arial, sans-serif;
+$t-font-family--primary: Roboto, $t-font-family;
+$t-font-family--secondary: 'Roboto Slab', $t-font-family;
+$t-font-family--accent: Oswald, sans-serif;
+$t-font-size: 16px;
+$t-line-height: 22px;
+
+// Put variables in a map for ease of output in styleguide
+$sg-tokens--font: (
+  font-family: $t-font-family,
+  font-family--primary: $t-font-family--primary,
+  font-family--secondary: $t-font-family--secondary,
+  font-family--accent: $t-font-family--accent,
+  font-size: $t-font-size,
+  line-height: $t-line-height,
+);
+
+
+// Dimensional Tokens
+//
+// Tokens with dimensional values
+//
+// Markup:
+// <div class="sg-variable-group">
+//   <div class="sg-variable" data-variable-name="nav-height"></div>
+//   <div class="sg-variable" data-variable-name="section-padding"></div>
+// </div>
+//
+// Weight: 30
+//
+// Styleguide Tokens.Dimensions
+$t-nav-height: 70px;
+$t-section-padding: 70px;
+
+$sg-tokens--dimension: (
+  nav-height: $t-nav-height,
+  section-padding: $t-section-padding,
+);

@@ -6,11 +6,11 @@
 
 body {
   color: $t-text-color;
-  font-family: $font-family--base;
-  line-height: ($line-height--base / $font-size--base);
+  font-family: $t-font-family;
+  line-height: ($t-line-height / $t-font-size);
 
   @include primary-font-loaded {
-    font-family: $font-family--primary;
+    font-family: $t-font-family--primary;
   }
 }
 
@@ -54,7 +54,7 @@ h2,
 
   @include accent-font-loaded {
     @include font-weight(normal, accent);
-    font-family: $font-family--accent;
+    font-family: $t-font-family--accent;
   }
 }
 
@@ -75,7 +75,7 @@ h3,
 
   @include accent-font-loaded {
     @include font-weight(bold, accent);
-    font-family: $font-family--accent;
+    font-family: $t-font-family--accent;
   }
 }
 

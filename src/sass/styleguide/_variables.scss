@@ -1,17 +1,10 @@
-// Don't display markup for variables since we are just showing names/values.
-// scss-lint:disable IdSelector
-#kssref-sass-variables .kss-markup {
-  display: none;
-}
-// scss-lint:enable IdSelector
-
 .sg-variable {
   font-family: monospace;
   font-size: 16px;
   line-height: 1.4;
 }
 
-@mixin variable($name, $map, $prefix: '$') {
+@mixin variable($name, $map, $prefix: '$t-') {
   .sg-variable {
     &[data-variable-name='#{$name}'] {
       &::before {
@@ -29,10 +22,10 @@
   }
 }
 
-@each $variable-name in map-keys($sg-variables) {
-  @include variable($variable-name, $sg-variables);
+@each $variable-name in map-keys($sg-tokens--font) {
+  @include variable($variable-name, $sg-tokens--font);
 }
 
-@each $variable-name in map-keys($sg-tokens) {
-  @include variable($variable-name, $sg-tokens, '$t-');
+@each $variable-name in map-keys($sg-tokens--dimension) {
+  @include variable($variable-name, $sg-tokens--dimension);
 }

@@ -1,0 +1,81 @@
+// Colors
+//
+// All colors should be referenced by variable name. Color naming is a complicated topic that needs to be further explored. Should you name by shade or by usage intent? Naming by usage is tough when the same color can be used in multiple places. You can quickly end up with a very complicated swatch setup.
+//
+// Markup:
+// <div class="sg-swatch-group">
+//   <div class="sg-swatch" data-color-name="white">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="grey-ccc">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="grey-666">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="grey-333">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="grey-222">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="grey-soft">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="black">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="green">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="blue">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="brick">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+//   <div class="sg-swatch" data-color-name="maroon">
+//    <div class="sg-swatch__preview"></div>
+//    <div class="sg-swatch__details"></div>
+//   </div>
+// </div>
+//
+// Weight: -100
+//
+// Styleguide Colors
+$color--white: #fff;
+$color--grey-ccc: #ccc;
+$color--grey-666: #666;
+$color--grey-333: #333;
+$color--grey-222: #222;
+$color--grey-soft: hsla(0, 0%, 71%, 0.5);
+$color--black: #000;
+$color--green: #4dbd90;
+$color--blue: #489fd9;
+$color--brick: #be3229;
+$color--maroon: #581a19;
+
+$sg-colors: (
+  white: $color--white,
+  grey-ccc: $color--grey-ccc,
+  grey-666: $color--grey-666,
+  grey-333: $color--grey-333,
+  grey-222: $color--grey-222,
+  grey-soft: $color--grey-soft,
+  black: $color--black,
+  green: $color--green,
+  blue: $color--blue,
+  brick: $color--brick,
+  maroon: $color--maroon,
+);
+

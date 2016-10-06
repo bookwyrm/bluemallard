@@ -34,7 +34,7 @@
   line-height: (44px / $font-size);
 
   @include accent-font-loaded {
-    font-family: $font-family--accent;
+    font-family: $t-font-family--accent;
   }
 
   time {
