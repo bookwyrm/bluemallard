@@ -91,6 +91,12 @@
       }));
   });
 
+  gulp.task('copy-ffo', function() {
+    gulp.src('bower_components/fontfaceobserver/fontfaceobserver.js')
+    .pipe(rename('fontfaceobserver.hbs'))
+    .pipe(gulp.dest('src/partials/static'))
+  });
+
   gulp.task('setup', ['sass-site', 'sass-styleguide', 'html', 'styleguide', 'symlink-images', 'webserver-site', 'webserver-styleguide']);
   gulp.task('default', ['sass-site', 'sass-styleguide', 'html', 'styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
 }());

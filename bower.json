@@ -17,6 +17,8 @@
   "devDependencies": {
     "normalize-css": "^4.2.0",
     "bourbon": "^4.2.7",
-    "neat": "^1.8.0"
+    "neat": "^1.8.0",
+    "fontfaceobserver": "^2.0.5",
+    "loadcss": "^1.2.0"
   }
 }
