@@ -12,6 +12,8 @@
 //
 // Weight: 1
 //
+// Status: Complete
+//
 // Styleguide Buttons.Default
 .c-button {
   display: inline-block;
@@ -54,6 +56,8 @@
 //
 // Weight: 2
 //
+// Status: In Progress
+//
 // Styleguide Buttons.Ghost
 .c-button--ghost {
   background-color: transparent;
@@ -79,6 +83,8 @@
 //
 // Weight: 3
 //
+// Status: In Review
+//
 // Styleguide Buttons.Accent
 .c-button--accent {
   background-color: $t-color--accent;
@@ -92,6 +98,8 @@
 // {{> button button-classes="c-button--full"}}
 //
 // Weight: 4
+//
+// Status: Deprecated
 //
 // Styleguide Buttons.Full
 .c-button--full {
