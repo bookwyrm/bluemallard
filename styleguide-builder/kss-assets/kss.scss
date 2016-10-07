@@ -276,18 +276,14 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
       margin: 0;
       padding: 0;
 
-      // @TODO: The ul is output even when there are no children. Fix this, so
-      // we can put these :first-child and :last child styles back on the ul.
-      li:first-child {
-        margin-top: 10px;
-        border-top: 1px solid #ccc;
-        padding: 10px 0 0;
+      li {
+        padding: 0 0 0 16px;
       }
 
       li:last-child {
         margin-bottom: 10px;
         border-bottom: 1px solid #ccc;
-        padding: 0 0 10px;
+        padding-bottom: 10px;
       }
     }
   }
