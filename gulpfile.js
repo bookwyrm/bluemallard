@@ -63,10 +63,32 @@
     ;
   });
 
+  function notifyLiveReload(event) {
+    var fileName = require('path').relative(__dirname, event.path);
+
+    livereload.changed(fileName);
+  }
+
+
   gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('./src/sass/**/*.scss', ['sass-styleguide', 'sass-site', 'generate-styleguide']);
     gulp.watch('./src/partials/**/*.hbs', ['generate-site', 'generate-styleguide']);
+    gulp.watch(
+      [
+        './styleguide-builder/index.hbs',
+        './styleguide-builder/builder.js',
+        './styleguide-builder/kss-assets/kss.css'
+      ],
+      ['generate-styleguide']
+    );
+    gulp.watch(
+      [
+        './styleguide/*.html',
+        './styleguide/**/*.css'
+      ],
+      notifyLiveReload
+    );
     gulp.watch('./src/pages/**/*.hbs', ['generate-site']);
   });
 
