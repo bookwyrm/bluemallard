@@ -78,7 +78,8 @@
       [
         './styleguide-builder/index.hbs',
         './styleguide-builder/builder.js',
-        './styleguide-builder/kss-assets/kss.css'
+        './styleguide-builder/kss-assets/kss.css',
+        './src/sass/homepage.md'
       ],
       ['generate-styleguide']
     );
