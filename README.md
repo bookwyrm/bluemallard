@@ -7,6 +7,7 @@
  * Inline and external markup examples
  * Sample site generation
  * Documentation examples for colors and tokens
+ * Pattern status support
 
 ### Setup
 
