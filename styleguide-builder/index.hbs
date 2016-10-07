@@ -72,6 +72,9 @@
     <{{#if @first}}div{{else}}section{{/if}} id="kssref-{{referenceURI}}" class="kss-section kss-section--depth-{{depth}}">
 
       <div class="kss-style">
+        {{#if status}}
+          <div class="kss-status kss-status--{{{to-class status}}}">{{{status}}}</div>
+        {{/if}}
         <h{{depth}} class="kss-title kss-title--level-{{depth}}">
           <a class="kss-title__permalink" href="#kssref-{{referenceURI}}">
             <span class="kss-title__ref">

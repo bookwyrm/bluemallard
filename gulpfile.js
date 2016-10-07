@@ -43,7 +43,9 @@
       source: 'src',
       destination: 'styleguide',
       css: 'styleguide.css',
-      builder: 'styleguide-builder'
+      builder: 'styleguide-builder',
+      title: 'Living Style Guide Example',
+      custom: [ 'Status' ]
     });
   });
 

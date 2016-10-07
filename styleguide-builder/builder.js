@@ -90,6 +90,10 @@ class KssBuilderHandlebars extends KssBuilderBaseHandlebars {
         return fs.readFileSync(__dirname + '/../src/partials/static/' + static_file + '.hbs');
       });
 
+      this.Handlebars.registerHelper('to-class', function(status) {
+        return status.toLowerCase().replace(/[^-a-z]/, '-');
+      });
+
       // Allow a builder user to override the {{section [reference]}} helper
       // with the --extend setting. Since a user's handlebars helpers are
       // loaded first, we need to check if this helper already exists.

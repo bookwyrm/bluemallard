@@ -312,6 +312,32 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     margin-bottom: ($kss-vertical-rhythm * 2);
   }
 
+  .kss-status {
+    padding: 3px 8px;
+    float: right;
+    border: 1px solid #222;
+    border-radius: 3px;
+    color: white;
+  }
+
+    .kss-status--in-progress {
+      background-color: #ccc;
+      color: #222;
+    }
+
+    .kss-status--in-review {
+      background-color: orange;
+      color: #222;
+    }
+
+    .kss-status--complete {
+      background-color: green;
+    }
+
+    .kss-status--deprecated {
+      background-color: #f22;
+    }
+
   .kss-title {
     margin-bottom: 0;
   }
