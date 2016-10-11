@@ -1,6 +1,6 @@
 # A Living Style Guide!
 
-Write some info here about how the style guide is generated and what it is used for.
+A sample living style guide based on the 2016 CSS Dev Conf website.
 
 ## Version 0.5.0
 
