@@ -50,7 +50,7 @@
     });
   });
 
-  gulp.task('generate-site', function() {
+  gulp.task('generate-site', ['sass-site'], function() {
     return gulp.src('./src/pages/*.hbs')
     .pipe(handlebars({}, {
       ignorePartials: true,
@@ -71,7 +71,7 @@
   }
 
 
-  gulp.task('watch', function() {
+  gulp.task('watch', ['webserver-site', 'webserver-styleguide'], function() {
     livereload.listen();
     gulp.watch('./src/sass/**/*.scss', ['sass-styleguide', 'sass-site', 'generate-styleguide']);
     gulp.watch('./src/partials/**/*.hbs', ['generate-site', 'generate-styleguide']);
@@ -100,7 +100,7 @@
     .pipe(vfs.symlink('styleguide'));
   });
 
-  gulp.task('webserver-site', function() {
+  gulp.task('webserver-site', ['generate-site'], function() {
     gulp.src('site')
       .pipe(webserver({
         host: 'localhost',
@@ -109,7 +109,7 @@
       }));
   });
 
-  gulp.task('webserver-styleguide', function() {
+  gulp.task('webserver-styleguide', ['generate-styleguide'], function() {
     gulp.src('styleguide')
       .pipe(webserver({
         host: 'localhost',
@@ -124,8 +124,8 @@
     .pipe(gulp.dest('src/partials/static'))
   });
 
-  gulp.task('setup', ['sass-site', 'sass-styleguide', 'generate-site', 'generate-styleguide', 'symlink-images']);
-  gulp.task('default', ['sass-site', 'sass-styleguide', 'generate-site', 'generate-styleguide', 'webserver-site', 'webserver-styleguide', 'watch']);
-  gulp.task('styleguide', ['sass-styleguide', 'generate-styleguide', 'webserver-styleguide']);
-  gulp.task('site', ['sass-site', 'generate-site', 'webserver-site']);
+  gulp.task('setup', ['generate-site', 'generate-styleguide', 'symlink-images']);
+  gulp.task('default', ['watch']);
+  gulp.task('styleguide', ['webserver-styleguide']);
+  gulp.task('site', ['webserver-site']);
 }());
