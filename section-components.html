@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Living Style Guide Example</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="styleguide.css">
+
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto|Roboto+Slab" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto|Roboto+Slab|Roboto+Condensed"></noscript>
+
+  <script>
+    (function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
+function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})};
+function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
+
+(function(){function l(a,b){document.addEventListener?a.addEventListener("scroll",b,!1):a.attachEvent("scroll",b)}function m(a){document.body?a():document.addEventListener?document.addEventListener("DOMContentLoaded",function c(){document.removeEventListener("DOMContentLoaded",c);a()}):document.attachEvent("onreadystatechange",function k(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",k),a()})};function r(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.f=document.createElement("span");this.g=-1;this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c)}
+function x(a,b){a.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font:"+b+";"}function y(a){var b=a.a.offsetWidth,c=b+100;a.f.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.g!==b?(a.g=b,!0):!1}function z(a,b){function c(){var a=k;y(a)&&null!==a.a.parentNode&&b(a.g)}var k=a;l(a.b,c);l(a.c,c);y(a)};function A(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"normal"}var B=null,D=null,E=null;function H(){if(null===D){var a=document.createElement("div");try{a.style.font="condensed 100px sans-serif"}catch(b){}D=""!==a.style.font}return D}function I(a,b){return[a.style,a.weight,H()?a.stretch:"","100px",b].join(" ")}
+A.prototype.load=function(a,b){var c=this,k=a||"BESbswy",q=0,C=b||3E3,F=(new Date).getTime();return new Promise(function(a,b){null===E&&(E=!!document.fonts);if(E){var J=new Promise(function(a,b){function e(){(new Date).getTime()-F>=C?b():document.fonts.load(I(c,'"'+c.family+'"'),k).then(function(c){1<=c.length?a():setTimeout(e,25)},function(){b()})}e()}),K=new Promise(function(a,c){q=setTimeout(c,C)});Promise.race([K,J]).then(function(){clearTimeout(q);a(c)},function(){b(c)})}else m(function(){function t(){var b;
+if(b=-1!=f&&-1!=g||-1!=f&&-1!=h||-1!=g&&-1!=h)(b=f!=g&&f!=h&&g!=h)||(null===B&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),B=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],10)&&11>=parseInt(b[2],10))),b=B&&(f==u&&g==u&&h==u||f==v&&g==v&&h==v||f==w&&g==w&&h==w)),b=!b;b&&(null!==d.parentNode&&d.parentNode.removeChild(d),clearTimeout(q),a(c))}function G(){if((new Date).getTime()-F>=C)null!==d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===
+a||void 0===a)f=e.a.offsetWidth,g=n.a.offsetWidth,h=p.a.offsetWidth,t();q=setTimeout(G,50)}}var e=new r(k),n=new r(k),p=new r(k),f=-1,g=-1,h=-1,u=-1,v=-1,w=-1,d=document.createElement("div");d.dir="ltr";x(e,I(c,"sans-serif"));x(n,I(c,"serif"));x(p,I(c,"monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);u=e.a.offsetWidth;v=n.a.offsetWidth;w=p.a.offsetWidth;G();z(e,function(a){f=a;t()});x(e,I(c,'"'+c.family+'",sans-serif'));z(n,function(a){g=a;t()});x(n,
+I(c,'"'+c.family+'",serif'));z(p,function(a){h=a;t()});x(p,I(c,'"'+c.family+'",monospace'))})})};"undefined"!==typeof module?module.exports=A:(window.FontFaceObserver=A,window.FontFaceObserver.prototype.load=A.prototype.load);}());
+
+    (function() {
+  function fontLoaded(type, key) {
+    window.document.documentElement.className += ' html__font-loaded--' + type;
+    sessionStorage['fontLoaded' + key] = true
+  }
+  function fontLoadFailed(key) {
+    sessionStorage['fontLoaded' + key] = false
+  }
+  
+  if ( !!sessionStorage.fontLoadedPrimary ) {
+    window.document.documentElement.className += ' html__font-loaded--primary';
+  } else {
+    new FontFaceObserver('Roboto').load(null, 5000).then(function() {
+      fontLoaded('primary', 'Primary');
+    }).catch(function() {
+    fontLoadFailed('Primary');
+    });
+  }
+
+  if ( !!sessionStorage.fontLoadedSecondary ) {
+    window.document.documentElement.className += ' html__font-loaded--secondary';
+  } else {
+    new FontFaceObserver('Roboto Slab').load(null, 5000).then(function() {
+      fontLoaded('secondary', 'Secondary');
+    }).catch(function() {
+    fontLoadFailed('Secondary');
+    });
+  }
+
+  if ( !!sessionStorage.fontLoadedAccent ) {
+    window.document.documentElement.className += ' html__font-loaded--accent';
+  } else {
+    new FontFaceObserver('Oswald').load(null, 5000).then(function() {
+      fontLoaded('accent', 'Accent');
+    }).catch(function() {
+    fontLoadFailed('Accent');
+    });
+  }
+
+  if ( !!sessionStorage.fontLoadedCondensed ) {
+    window.document.documentElement.className += ' html__font-loaded--condensed';
+  } else {
+    new FontFaceObserver('Roboto Condensed').load(null, 5000).then(function() {
+      fontLoaded('condensed', 'Condensed');
+    }).catch(function() {
+    fontLoadFailed('Condensed');
+    });
+  }
+}())
+
+    /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this),/*! CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT  */
+function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+
+  </script>
+</head>
+<body id="kss-node">
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Living Style Guide Example</h1>
+  </header>
+  <nav class="kss-nav">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./index.html">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-colors.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Colors</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-tokens.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Tokens</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-sass.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Sass</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Base</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-buttons.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Buttons</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Components</span>
+        </a>
+            <ul class="kss-nav__menu-child">
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-components.html#kssref-components-hero">
+                  <span class="kss-nav__ref ">6.1</span>
+                  <span class="kss-nav__name">Hero Component</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-components.html#kssref-components-speaker">
+                  <span class="kss-nav__ref ">6.2</span>
+                  <span class="kss-nav__name">Speaker</span>
+                </a>
+              </li>
+            </ul>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-layouts.html">
+          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Layouts</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-globals.html">
+          <span class="kss-nav__ref">8</span><span class="kss-nav__name">Globals</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-navigation.html">
+          <span class="kss-nav__ref">9</span><span class="kss-nav__name">Navigation</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-vendor.html">
+          <span class="kss-nav__ref">10</span><span class="kss-nav__name">Vendor Libraries</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<article role="main" class="kss-main">
+
+    <div id="kssref-components" class="kss-section kss-section--depth-1">
+
+      <div class="kss-style">
+        <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-components">
+            <span class="kss-title__ref">
+              6
+              <span class="kss-title__permalink-hash">
+                  #Components
+              </span>
+            </span>
+            Components
+          </a>
+        </h1>
+
+          <div class="kss-description">
+            <p>Some info about components</p>
+
+          </div>
+
+      </div>
+
+
+        <div class="kss-source kss-style">
+          Source: <code>sass/_kss-headings.scss</code>, line 15
+        </div>
+
+    </div>
+    <section id="kssref-components-hero" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-components-hero">
+            <span class="kss-title__ref">
+              6.1
+              <span class="kss-title__permalink-hash">
+                  #Components.Hero
+              </span>
+            </span>
+            Hero Component
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p>The hero banner.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="c-hero">
+  <div class="l-container">
+    <div class="c-hero__body">
+      <h1 class="c-hero__title">San Antonio <time>October 17-19, 2016</time></h1>
+      <p class="c-hero__description">The 1st Conference Dedicated to CSS returns for its fifth year —  deep in the ❤ of Texas</p>
+      <div class="c-button-group">
+        <a href="#" class="c-button ">Register</a>
+        <a href="#" class="c-button c-button--ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="c-hero__media">
+      <img src="images/hero-spot.jpeg" class="c-hero__spot" alt="CSS Dev Conf text over Alamo image">
+    </div>
+  </div>
+</div>
+
+
+          </div>
+
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;c-hero&quot;&gt;
+  &lt;div class&#x3D;&quot;l-container&quot;&gt;
+    &lt;div class&#x3D;&quot;c-hero__body&quot;&gt;
+      &lt;h1 class&#x3D;&quot;c-hero__title&quot;&gt;San Antonio &lt;time&gt;October 17-19, 2016&lt;/time&gt;&lt;/h1&gt;
+      &lt;p class&#x3D;&quot;c-hero__description&quot;&gt;The 1st Conference Dedicated to CSS returns for its fifth year —  deep in the ❤ of Texas&lt;/p&gt;
+      &lt;div class&#x3D;&quot;c-button-group&quot;&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;c-button &quot;&gt;Register&lt;/a&gt;
+        &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;c-button c-button--ghost&quot;&gt;Learn More&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;c-hero__media&quot;&gt;
+      &lt;img src&#x3D;&quot;images/hero-spot.jpeg&quot; class&#x3D;&quot;c-hero__spot&quot; alt&#x3D;&quot;CSS Dev Conf text over Alamo image&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>sass/components/_hero.scss</code>, line 1
+        </div>
+
+    </section>
+    <section id="kssref-components-speaker" class="kss-section kss-section--depth-2">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-components-speaker">
+            <span class="kss-title__ref">
+              6.2
+              <span class="kss-title__permalink-hash">
+                  #Components.Speaker
+              </span>
+            </span>
+            Speaker
+          </a>
+        </h2>
+
+          <div class="kss-description">
+            <p>A speaker headshot.</p>
+
+          </div>
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <div class="c-speaker">
+  <div class="c-speaker__media">
+    <a href="c-speaker__link"><img src="images/chris-coyier.jpeg" class="c-speaker__headshot" alt="Chris Coyier Headshot"></a>
+  </div>
+  <div class="c-speaker__body">
+    <h3 class="c-speaker__name">Chris Coyier</h3>
+    <p class="c-speaker__byline">Featured Speaker</p>
+  </div>
+</div>
+
+          </div>
+
+        </div>
+          <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class&#x3D;&quot;c-speaker&quot;&gt;
+  &lt;div class&#x3D;&quot;c-speaker__media&quot;&gt;
+    &lt;a href&#x3D;&quot;c-speaker__link&quot;&gt;&lt;img src&#x3D;&quot;images/chris-coyier.jpeg&quot; class&#x3D;&quot;c-speaker__headshot&quot; alt&#x3D;&quot;Chris Coyier Headshot&quot;&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;c-speaker__body&quot;&gt;
+    &lt;h3 class&#x3D;&quot;c-speaker__name&quot;&gt;Chris Coyier&lt;/h3&gt;
+    &lt;p class&#x3D;&quot;c-speaker__byline&quot;&gt;Featured Speaker&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+
+        <div class="kss-source kss-style">
+          Source: <code>sass/components/_speaker.scss</code>, line 1
+        </div>
+
+    </section>
+</article>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/prettify.js"></script>
+<script>
+  prettyPrint();
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+</script>
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>
