@@ -45,7 +45,7 @@
       destination: 'styleguide',
       css: 'styleguide.css',
       builder: 'styleguide-builder',
-      title: 'Living Style Guide Example',
+      title: 'Blue Mallard',
       custom: [ 'Status' ]
     });
   });

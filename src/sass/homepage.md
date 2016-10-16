@@ -1,8 +1,12 @@
-# A Living Style Guide!
+# Blue Mallard
 
-A sample living style guide based on the 2016 CSS Dev Conf website.
+A sample Living Style Guide based on the [2016 CSS Dev Conf website](http://2016.cssdevconf.com).
 
 ## Version 0.5.0
+
+## Git Repo
+
+<https://github.com/bookwyrm/bluemallard>
 
 ## Class Namespaces
 
