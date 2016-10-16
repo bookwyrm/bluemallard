@@ -44,7 +44,7 @@
       source: 'src',
       destination: 'styleguide',
       css: 'styleguide.css',
-      builder: 'styleguide-builder',
+      builder: 'styleguide-theme',
       title: 'Blue Mallard',
       custom: [ 'Status' ]
     });
