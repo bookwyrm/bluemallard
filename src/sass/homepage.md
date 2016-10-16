@@ -26,7 +26,7 @@ Patterns can be tagged with a status which should be one of the following:
   * `Deprecated` - the pattern has been deprecated and should no longer be used
 
 
-## Examples
+## Example Styleguides
 
 * <https://rizzo.lonelyplanet.com/styleguide/>
 * <http://primercss.io>
