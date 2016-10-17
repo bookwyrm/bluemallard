@@ -29,3 +29,10 @@
 #kssref-globals-siteheader .g-header {
   position: static;
 }
+
+.kss-style h1 {
+  @include accent-font-loaded {
+    @include font-weight(normal, accent);
+    font-family: $t-font-family--accent;
+  }
+}
