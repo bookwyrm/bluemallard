@@ -8,6 +8,10 @@ A sample Living Style Guide based on the [2016 CSS Dev Conf website](http://2016
 
 <https://github.com/bookwyrm/bluemallard>
 
+## Slides
+
+I have published the [slides for my talk](generate-a-living-styleguide-from-css-slides_CSSDevConf-2016.pdf) at [2016 CSS Dev Conf](http://2016.cssdevconf.com).
+
 ## Class Namespaces
 
 * `sg-` style guide styles
