@@ -8,6 +8,7 @@
  * Sample site generation
  * Documentation examples for colors and tokens
  * Pattern status support
+ * Asynchronous font loading
 
 ### Setup
 
